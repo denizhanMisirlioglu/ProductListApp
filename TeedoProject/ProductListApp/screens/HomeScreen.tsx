@@ -20,9 +20,9 @@ type Props = {
 const HomeScreen: React.FC<Props> = ({ navigation }) => {
   // Ürün listesini state ile yönetiyoruz.
   const [products, setProducts] = useState<Product[]>([
-    { id: '1', name: 'Ürün 1', description: 'Ürün 1 açıklaması', price: '100 TL' },
-    { id: '2', name: 'Ürün 2', description: 'Ürün 2 açıklaması', price: '200 TL' },
-    { id: '3', name: 'Ürün 3', description: 'Ürün 3 açıklaması', price: '300 TL' },
+    { id: '1', name: 'Samsung Galaxy A50', description: 'Samsung marka telefon', price: '9900 TL' },
+    { id: '2', name: 'Samsung Galaxy Tab A9', description: 'Samsung marka tablet', price: '15000 TL' },
+    { id: '3', name: 'Huawei  Metapad', description: 'Huawei marka tablet', price: '8000 TL' },
   ]);
 
   // Her ürün için liste öğesini render ediyoruz.
