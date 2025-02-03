@@ -4,7 +4,10 @@ import { View, Text, StyleSheet } from 'react-native';
 import { RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from '../App';
 
-type ProductDetailsScreenRouteProp = RouteProp<RootStackParamList, 'ProductDetails'>;
+type ProductDetailsScreenRouteProp = RouteProp<
+  RootStackParamList,
+  'ProductDetails'
+>;
 
 type Props = {
   route: ProductDetailsScreenRouteProp;

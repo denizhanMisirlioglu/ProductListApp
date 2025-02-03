@@ -1,6 +1,12 @@
 // screens/HomeScreen.tsx
 import React, { useState } from 'react';
-import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  StyleSheet,
+} from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../App';
 
@@ -11,7 +17,10 @@ export type Product = {
   price: string;
 };
 
-type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
+type HomeScreenNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  'Home'
+>;
 
 type Props = {
   navigation: HomeScreenNavigationProp;
@@ -20,9 +29,24 @@ type Props = {
 const HomeScreen: React.FC<Props> = ({ navigation }) => {
   // Ürün listesini state ile yönetiyoruz.
   const [products, setProducts] = useState<Product[]>([
-    { id: '1', name: 'Samsung Galaxy A50', description: 'Samsung marka telefon', price: '9900 TL' },
-    { id: '2', name: 'Samsung Galaxy Tab A9', description: 'Samsung marka tablet', price: '15000 TL' },
-    { id: '3', name: 'Huawei  Metapad', description: 'Huawei marka tablet', price: '8000 TL' },
+    {
+      id: '1',
+      name: 'Samsung Galaxy A50',
+      description: 'Samsung marka telefon',
+      price: '9900 TL',
+    },
+    {
+      id: '2',
+      name: 'Samsung Galaxy Tab A9',
+      description: 'Samsung marka tablet',
+      price: '15000 TL',
+    },
+    {
+      id: '3',
+      name: 'Huawei  Metapad',
+      description: 'Huawei marka tablet',
+      price: '8000 TL',
+    },
   ]);
 
   // Her ürün için liste öğesini render ediyoruz.
@@ -39,7 +63,11 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <FlatList data={products} keyExtractor={(item) => item.id} renderItem={renderItem} />
+      <FlatList
+        data={products}
+        keyExtractor={(item) => item.id}
+        renderItem={renderItem}
+      />
     </View>
   );
 };
